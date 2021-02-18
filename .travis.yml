@@ -1,0 +1,13 @@
+language: cpp
+compiler:
+  - clang
+before_script:
+  - mkdir ../build
+  - cd ../build
+script:
+  - cmake ../mp2-lab2
+  - make -j
+  - cd ./test
+  - ./test_matrixlib
+notifications:
+  email: false
